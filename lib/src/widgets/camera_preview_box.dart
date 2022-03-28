@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:camera_detection/camera_detection.dart';
 import 'package:camera_detection/src/values/typedefs.dart';
 import 'package:flutter/material.dart';
@@ -108,7 +106,7 @@ class _CameraDetectionBoxState extends State<CameraDetectionBox>
     if (widget.faceDetector != null) {
       if (!_faceDetecting) {
         _faceDetecting = true;
-        final sw = Stopwatch()..start();
+
         widget.faceDetector?.detect(image).then((faces) {
           final _faceDetection = widget.onFaceDetection;
           final _faceAnalysisDetection = widget.onFaceAnalysisDetection;
