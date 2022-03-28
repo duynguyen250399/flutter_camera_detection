@@ -19,7 +19,6 @@ class CameraDetectionBox extends StatefulWidget {
     this.onFaceAnalysisDetection,
     this.onBlurryDetection,
     this.onBrightnessDetection,
-    this.faceDistanceDetectVariantOffset = const Offset(0.5, 0.3),
   }) : super(key: key);
 
   final ResolutionPreset cameraResolution;
@@ -36,10 +35,6 @@ class CameraDetectionBox extends StatefulWidget {
   final FaceAnalysisDetectionCallback? onFaceAnalysisDetection;
   final BlurryDetectionCallback? onBlurryDetection;
   final BrightnessDetectionCallback? onBrightnessDetection;
-
-  /// The variance offset to estimate the distance of face which is near or far
-  /// from camera
-  final Offset faceDistanceDetectVariantOffset;
 
   @override
   State<CameraDetectionBox> createState() => _CameraDetectionBoxState();
