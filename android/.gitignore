@@ -7,4 +7,4 @@
 /build
 /captures
 /opencv/**
-src/main/jniLibs/**
+src/main/jniLibs
