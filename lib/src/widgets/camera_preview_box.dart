@@ -137,7 +137,6 @@ class _CameraDetectionBoxState extends State<CameraDetectionBox>
         }).whenComplete(
           () {
             _faceDetecting = false;
-            log('Detect face execution time: ${sw.elapsedMilliseconds} ms');
           },
         );
       }
