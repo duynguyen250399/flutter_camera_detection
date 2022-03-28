@@ -107,7 +107,11 @@ class _CameraDetectionBoxState extends State<CameraDetectionBox>
       if (!_faceDetecting) {
         _faceDetecting = true;
 
-        widget.faceDetector?.detect(image).then((faces) {
+        final cameraRotation = _cameraController!.description.sensorOrientation;
+
+        widget.faceDetector
+            ?.detect(image, rotation: cameraRotation)
+            .then((faces) {
           final _faceDetection = widget.onFaceDetection;
           final _faceAnalysisDetection = widget.onFaceAnalysisDetection;
 
