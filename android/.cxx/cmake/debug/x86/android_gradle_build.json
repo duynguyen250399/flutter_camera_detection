@@ -1,0 +1,45 @@
+{
+  "stringTable": {
+    "0": "/Users/duykhanhnguyen/Projects/camera_scanner/plugins/camera_detection/android/.cxx/cmake/debug/x86",
+    "1": "--target=i686-none-linux-android21 --gcc-toolchain=/Users/duykhanhnguyen/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/duykhanhnguyen/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dcamera_detection_EXPORTS -I../../../../opencv/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -frtti -fexceptions -std=c++11 -O0 -fno-limit-debug-info -fPIC"
+  },
+  "buildFiles": [
+    "/Users/duykhanhnguyen/Projects/camera_scanner/plugins/camera_detection/android/CMakeLists.txt",
+    "/Users/duykhanhnguyen/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
+    "/Users/duykhanhnguyen/Library/Android/sdk/ndk/21.1.6352462/build/cmake/platforms.cmake"
+  ],
+  "cleanCommands": [
+    "/Users/duykhanhnguyen/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/duykhanhnguyen/Projects/camera_scanner/plugins/camera_detection/android/.cxx/cmake/debug/x86\" clean"
+  ],
+  "buildTargetsCommand": "/Users/duykhanhnguyen/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/duykhanhnguyen/Projects/camera_scanner/plugins/camera_detection/android/.cxx/cmake/debug/x86\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "camera_detection-Debug-x86": {
+      "buildCommand": "/Users/duykhanhnguyen/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/duykhanhnguyen/Projects/camera_scanner/plugins/camera_detection/android/.cxx/cmake/debug/x86\" camera_detection",
+      "buildType": "debug",
+      "toolchain": "3996953109",
+      "abi": "x86",
+      "artifactName": "camera_detection",
+      "files": [
+        {
+          "src": "/Users/duykhanhnguyen/Projects/camera_scanner/plugins/camera_detection/ios/Classes/camera_detection.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "/Users/duykhanhnguyen/Projects/camera_scanner/build/camera_detection/intermediates/cmake/debug/obj/x86/libcamera_detection.so",
+      "runtimeFiles": [
+        "/Users/duykhanhnguyen/Projects/camera_scanner/plugins/camera_detection/android/src/main/jniLibs/x86/libopencv_java4.so"
+      ]
+    }
+  },
+  "toolchains": {
+    "3996953109": {
+      "cppCompilerExecutable": "/Users/duykhanhnguyen/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

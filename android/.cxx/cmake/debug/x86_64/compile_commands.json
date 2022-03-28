@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/duykhanhnguyen/Projects/camera_scanner/plugins/camera_detection/android/.cxx/cmake/debug/x86_64",
+  "command": "/Users/duykhanhnguyen/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=x86_64-none-linux-android21 --gcc-toolchain=/Users/duykhanhnguyen/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/duykhanhnguyen/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dcamera_detection_EXPORTS -I../../../../opencv/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -frtti -fexceptions -std=c++11 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/camera_detection.dir/Users/duykhanhnguyen/Projects/camera_scanner/plugins/camera_detection/ios/Classes/camera_detection.cpp.o -c /Users/duykhanhnguyen/Projects/camera_scanner/plugins/camera_detection/ios/Classes/camera_detection.cpp",
+  "file": "/Users/duykhanhnguyen/Projects/camera_scanner/plugins/camera_detection/ios/Classes/camera_detection.cpp"
+}
+]

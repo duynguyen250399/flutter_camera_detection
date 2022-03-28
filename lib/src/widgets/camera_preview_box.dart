@@ -84,10 +84,8 @@ class _CameraDetectionBoxState extends State<CameraDetectionBox>
       _effectDetecting = true;
 
       if (widget.brightnessDetector != null) {
-        final sw = Stopwatch()..start();
         final brightnessStatus = widget.brightnessDetector?.detect(image) ??
             CameraDetectionBrightnessStatus.normal;
-        log('Detect brightness execution time: ${sw.elapsedMilliseconds} ms');
 
         final _brightnessDetection = widget.onBrightnessDetection;
 
@@ -97,9 +95,7 @@ class _CameraDetectionBoxState extends State<CameraDetectionBox>
       }
 
       if (widget.blurryDetector != null) {
-        final sw = Stopwatch()..start();
         final blurry = widget.blurryDetector?.detect(image) ?? false;
-        log('Detect blurry execution time: ${sw.elapsedMilliseconds} ms');
         final _blurryDetection = widget.onBlurryDetection;
         if (_blurryDetection != null) {
           _blurryDetection(blurry);

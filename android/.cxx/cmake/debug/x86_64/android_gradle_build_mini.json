@@ -1,0 +1,22 @@
+{
+  "buildFiles": [
+    "/Users/duykhanhnguyen/Projects/camera_scanner/plugins/camera_detection/android/CMakeLists.txt",
+    "/Users/duykhanhnguyen/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
+    "/Users/duykhanhnguyen/Library/Android/sdk/ndk/21.1.6352462/build/cmake/platforms.cmake"
+  ],
+  "cleanCommands": [
+    "/Users/duykhanhnguyen/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/duykhanhnguyen/Projects/camera_scanner/plugins/camera_detection/android/.cxx/cmake/debug/x86_64\" clean"
+  ],
+  "buildTargetsCommand": "/Users/duykhanhnguyen/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/duykhanhnguyen/Projects/camera_scanner/plugins/camera_detection/android/.cxx/cmake/debug/x86_64\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "camera_detection-Debug-x86_64": {
+      "artifactName": "camera_detection",
+      "buildCommand": "/Users/duykhanhnguyen/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/duykhanhnguyen/Projects/camera_scanner/plugins/camera_detection/android/.cxx/cmake/debug/x86_64\" camera_detection",
+      "abi": "x86_64",
+      "output": "/Users/duykhanhnguyen/Projects/camera_scanner/build/camera_detection/intermediates/cmake/debug/obj/x86_64/libcamera_detection.so",
+      "runtimeFiles": [
+        "/Users/duykhanhnguyen/Projects/camera_scanner/plugins/camera_detection/android/src/main/jniLibs/x86_64/libopencv_java4.so"
+      ]
+    }
+  }
+}

@@ -4,6 +4,7 @@
 using namespace cv;
 
 extern "C" {
+
     __attribute__((visibility("default"))) __attribute__((used))
 	const char* version() {
 		return CV_VERSION;
@@ -30,25 +31,6 @@ extern "C" {
 		int brightness = result[2];
 		
 		return brightness;
-	}
-
-	__attribute__((visibility("default"))) __attribute__((used))
-	const double detectFaces(int width, int height, uint8_t* bytes, bool isYUV) {
-		Mat frame;
-
-		if(isYUV){
-			Mat myyuv(height + height / 2, width, CV_8UC1, bytes);
-			cvtColor(myyuv, frame, COLOR_YUV2BGRA_NV21);
-		}
-		else {
-			frame = Mat(height, width, CV_8UC4, bytes);
-		}
-
-		Mat grayScale;
-
-		cvtColor(frame, grayScale, COLOR_BGR2GRAY);
-
-
 	}
 
 	__attribute__((visibility("default"))) __attribute__((used))

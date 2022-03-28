@@ -1,0 +1,5 @@
+# ninja log v5
+0	1927	1648457577	CMakeFiles/camera_detection.dir/Users/duykhanhnguyen/Projects/camera_scanner/plugins/camera_detection/ios/Classes/camera_detection.cpp.o	b34d8e533596aae3
+1929	2020	1648457577	/Users/duykhanhnguyen/Projects/camera_scanner/build/camera_detection/intermediates/cmake/debug/obj/x86_64/libcamera_detection.so	c64ec1b2c057f475
+6	2085	1648463467	CMakeFiles/camera_detection.dir/Users/duykhanhnguyen/Projects/camera_scanner/plugins/camera_detection/ios/Classes/camera_detection.cpp.o	b34d8e533596aae3
+2085	2221	1648463467	/Users/duykhanhnguyen/Projects/camera_scanner/build/camera_detection/intermediates/cmake/debug/obj/x86_64/libcamera_detection.so	c64ec1b2c057f475
