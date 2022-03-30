@@ -1,7 +1,7 @@
 # camera_detection
 
 A Flutter's Plugin integrating with OpenCV Library (C++) using Dart FFI (Foreign Function Interface).
-This plugin also implement `google_ml_kit` package for face detection and using plugin `camera` to control the live camera while detection happening
+This plugin also implement `google_ml_vision` package for face detection and using plugin `camera` to control the live camera while detection happening
 
 This plugin was inspired by an article on **Medium**
 
@@ -32,6 +32,9 @@ All done!
 ### Android
 ```
 ext.kotlin_version = '1.6.10'
+```
+
+```
 minSdkVersion 21
 compileSdkVersion 31
 ```
@@ -40,5 +43,13 @@ compileSdkVersion 31
 In `./ios/Podfile`, set the target platform ios version to `12`
 ```
 platform :ios, '12.0'
+```
+
+Because this plugin is using `camera` plugin, so we need to config these lines in `Info.plist`
+```
+<key>NSCameraUsageDescription</key>
+<string>your usage description here</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>your usage description here</string>
 ```
 
