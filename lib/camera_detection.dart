@@ -5,4 +5,4 @@ export 'src/values/enums.dart';
 export 'src/widgets/camera_preview_box.dart';
 
 export 'package:camera/camera.dart';
-export 'package:google_ml_kit/google_ml_kit.dart';
+export 'package:google_ml_vision/google_ml_vision.dart';

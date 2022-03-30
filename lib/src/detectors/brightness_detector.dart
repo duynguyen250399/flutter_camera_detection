@@ -30,6 +30,10 @@ class CameraBrightnessDetector
   CameraDetectionBrightnessStatus detect(CameraImage cameraImage) {
     int brightness = measureCameraBrightness(cameraImage);
 
+    // if (kDebugMode) {
+    //   log('camera brightness: $brightness');
+    // }
+
     if (brightness > darkThreshold && brightness < brightThreshold) {
       return CameraDetectionBrightnessStatus.normal;
     } else if (brightness <= darkThreshold) {

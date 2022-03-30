@@ -4,6 +4,8 @@ enum CameraDetectionFaceStatus {
   tooNearCamera,
   tooFarCamera,
   normal,
+  outsideBox,
+  notCenterCameraPreview,
 }
 
 enum CameraDetectionBrightnessStatus {

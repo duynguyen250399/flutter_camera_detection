@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:camera_detection/camera_detection.dart';
 import 'package:camera_detection/src/values/typedefs.dart';
 import 'package:flutter/material.dart';
@@ -61,6 +63,9 @@ class _CameraDetectionBoxState extends State<CameraDetectionBox>
         camera,
         widget.cameraResolution,
         enableAudio: widget.enableAudio,
+        imageFormatGroup: Platform.isAndroid
+            ? ImageFormatGroup.yuv420
+            : ImageFormatGroup.bgra8888,
       );
 
       await _cameraController?.initialize();
