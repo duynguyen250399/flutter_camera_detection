@@ -4,7 +4,6 @@ enum CameraDetectionFaceStatus {
   tooNearCamera,
   tooFarCamera,
   normal,
-  outsideBox,
   notCenterCameraPreview,
 }
 
@@ -12,4 +11,9 @@ enum CameraDetectionBrightnessStatus {
   normal,
   tooDark,
   tooBright,
+}
+
+enum CameraDetectionType {
+  face,
+  document,
 }

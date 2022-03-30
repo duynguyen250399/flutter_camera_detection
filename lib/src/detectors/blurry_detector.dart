@@ -22,10 +22,6 @@ class CameraBlurryDetector extends BaseDetector<bool> {
   bool detect(CameraImage cameraImage) {
     double blurry = measureCameraBlurry(cameraImage);
 
-    // if (kDebugMode) {
-    //   log('camera blurry: $blurry');
-    // }
-
     return blurry <= threshold ? true : false;
   }
 

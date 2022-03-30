@@ -143,43 +143,31 @@ class CameraFaceDetector extends BaseDetector<Future<List<Face>>> {
     final bottom = box.bottom * scaleY;
 
     final left = (cameraLensDirection == CameraLensDirection.front)
-        ? previewSize.width - box.right * scaleX
+        ? (image.width - box.right) * scaleX
         : box.left * scaleX;
 
     final right = (cameraLensDirection == CameraLensDirection.front)
-        ? previewSize.width - box.left * scaleX
+        ? (image.width - box.left) * scaleX
         : box.right * scaleX;
 
     final rect = Rect.fromLTRB(left, top, right, bottom);
+
+    final centerX = rect.center.dx;
+    final centerY = rect.center.dy;
+
+    final centerCameraPreviewBox = centerX > (previewSize.width / 2) - 30 &&
+        centerX < (previewSize.width / 2) + 30 &&
+        centerY > (previewSize.height / 2) - 30 &&
+        centerY < (previewSize.height / 2) + 30;
+
+    if (!centerCameraPreviewBox) {
+      return CameraDetectionFaceStatus.notCenterCameraPreview;
+    }
 
     if (rect.width >= previewSize.width * nearThreshold) {
       return CameraDetectionFaceStatus.tooNearCamera;
     } else if (rect.width < previewSize.width * farThreshold) {
       return CameraDetectionFaceStatus.tooFarCamera;
-    }
-
-    // Detect whenever the user's face is inside the camera preview or not
-    final insideCameraPreviewBox = left > 0 &&
-        right < previewSize.width &&
-        top > 0 &&
-        top < previewSize.height;
-
-    if (!insideCameraPreviewBox) {
-      return CameraDetectionFaceStatus.outsideBox;
-    }
-
-    // Calculate the offset which will be subtract when detect the user's face is center or not center
-    // within camera preview
-    final xCenterOffset = faceCenterOffset?.dx ?? previewSize.width / 6.0;
-    final yCenterOffset = faceCenterOffset?.dy ?? previewSize.height / 6.0;
-
-    final centerCameraPreviewBox = left > xCenterOffset &&
-        right < previewSize.width - xCenterOffset &&
-        top > yCenterOffset &&
-        top < previewSize.height - yCenterOffset;
-
-    if (!centerCameraPreviewBox) {
-      return CameraDetectionFaceStatus.notCenterCameraPreview;
     }
 
     // If all conditions above passed, the face is perfectly normal
